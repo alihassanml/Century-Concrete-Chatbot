@@ -139,7 +139,7 @@ const Chatbot = () => {
     setTypingMessage("Support agent is typing...");
 
     try {
-      const response = await fetch("https://auto.robogrowthpartners.com/webhook/3ff151e4-caeecentury", {
+      const response = await fetch("https://auto.robogrowthpartners.com/webhook/century-concrete-chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId, message: userMessage })
