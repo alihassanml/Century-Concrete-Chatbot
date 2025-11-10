@@ -11,7 +11,7 @@ type Screen = 'home' | 'chat' | 'faq' | 'appointment';
 
 const WELCOME_MESSAGE = `Hi! Welcome to Adams Heating & Cooling. How can we help you today?`;
 
-const AdamsChatbot = () => {
+const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [screen, setScreen] = useState<Screen>('home');
   const [input, setInput] = useState('');
@@ -538,4 +538,4 @@ const AdamsChatbot = () => {
   );
 };
 
-export default AdamsChatbot;
+export default Chatbot;
