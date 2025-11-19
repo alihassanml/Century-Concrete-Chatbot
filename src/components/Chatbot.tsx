@@ -66,25 +66,61 @@ const Chatbot = () => {
 
   const faqData = [
     {
-      question: "What services does Century Concrete provide?",
-      answer: "We specialize in stamped concrete, driveways, patios, sidewalks, flooring & coatings for residential and commercial projects.  "
+      question: "What services does Century Concrete Design offer?",
+      answer: "We offer stamped & decorative concrete, driveways, walkways & patios, commercial & structural concrete, concrete foundations, and stairs & suspended slabs. "
     },
     {
-      question: "Do you offer free estimates?",
-      answer: "Yes! We provide free on-site estimates. Our experts will assess your project and provide a detailed quote."
+      question: "Do you work on both residential and commercial projects?",
+      answer: "Yes – we handle concrete solutions for residential homes as well as commercial and structural construction. "
     },
     {
-      question: "What areas do you serve?",
-      answer: "We primarily serve the Houston metropolitan area and nearby cities. Contact us to confirm availability in your location."
+      question: "Where is Century Concrete Design located?",
+      answer: "Our office is at 311 Towbridge Dr, Murfreesboro, Tennessee 37129. "
     },
     {
-      question: "How long does a concrete project take?",
-      answer: "Project duration depends on size and type, typically 2-5 days for residential driveways or patios."
+      question: "How can I contact you for a consultation or estimate?",
+      answer: "You can reach us at (629) 543-9843 or email info@centuryconcretedesign.com for a free consultation. "
+    },
+    {
+      question: "What makes your decorative concrete ‘stamped’?",
+      answer: "Our stamped decorative concrete mimics natural materials like stone, brick, or tile while providing the strength and durability of concrete. "
+    },
+    {
+      question: "Do you do concrete repair work?",
+      answer: "Yes – in addition to installation, we provide repair services to restore concrete surfaces with precision and durability. "
+    },
+    {
+      question: "Can you build a strong foundation for my home or building?",
+      answer: "Absolutely. We construct concrete foundations that ensure structural integrity and stability for residential or commercial buildings. "
+    },
+    {
+      question: "Do you build stairs and suspended slabs?",
+      answer: "Yes, we specialize in stairs and suspended concrete slabs, tailored to your design and structural needs. "
+    },
+    {
+      question: "How do you ensure the quality of your concrete work?",
+      answer: "We use high-quality materials, experienced craftsmen, and a commitment to precision and lasting design. Our finishing and detailing are done with great care. "
+    },
+    {
+      question: "What is your project promise or guarantee?",
+      answer: "We promise to only use long-lasting quality materials, complete projects on time, maintain clear pricing with no hidden charges, and deliver expert craftsmanship. "
+    },
+    {
+      question: "How long have you been in business?",
+      answer: "Our company grew from more than a decade of hands-on experience, especially in high-end residential construction, and continues to build on that legacy. "
+    },
+    {
+      question: "Are you insured and licensed?",
+      answer: "Yes – we operate professionally with full licensing and insurance to protect both our team and our clients. "
+    },
+    {
+      question: "Can you handle custom or unique concrete designs?",
+      answer: "For sure. We thrive on collaboration and can adapt to custom specifications and creative design challenges. "
     }
   ];
 
   const quickActions = [
-    
+
     {
       icon: MessageCircle,
       title: "Start a Chat",
@@ -92,7 +128,7 @@ const Chatbot = () => {
       action: () => setScreen('chat'),
       gradient: "from-[#0A2342] to-[#001F3F]"
     },
-   
+
     {
       icon: Mail,
       title: "Email Support",
@@ -217,7 +253,7 @@ const Chatbot = () => {
   if (!isOpen) return null;
 
 
- 
+
 
 
   return (
@@ -234,7 +270,7 @@ const Chatbot = () => {
       >
         <div className="flex flex-col h-full">
           {/* Header with Black/Gray Gradient */}
-          <div className={`relative overflow-hidden bg-gradient-to-br from-[#0A2342] via-[#001F3F] to-[#001F3f] ${screen === 'home' ? 'pb-8' : ''}`} style={{ borderRadius: '25px 25px 0 0', border: "none" }}>
+          <div className={`relative overflow-hidden bg-gradient-to-br from-[#0A2342] via-[#001F3F] to-[#001F3f] ${screen === 'home' ? 'pb-2' : ''}`} style={{ borderRadius: '25px 25px 0 0', border: "none" }}>
             {/* Animated Background Effects */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl animate-pulse"
@@ -263,13 +299,13 @@ const Chatbot = () => {
             <div className={`relative z-10 text-white ${screen === 'home' ? 'p-5 sm:p-6 pb-0' : 'p-4 sm:p-5'}`}>
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-white to-gray-100 rounded-xl flex items-center justify-center shadow-lg">
-                    <div className="text-xl sm:text-2xl font-bold text-yellow-500">A</div>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14  rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="text-xl sm:text-2xl font-bold text-yellow-500"><img src="image.png" alt="" /></div>
                   </div>
                   <div>
                     <h3 className="font-bold text-lg sm:text-xl tracking-wide">Century Concrete</h3>
                     <div className="flex items-center space-x-2 text-xs sm:text-sm opacity-90">
-                      <span className="text-gray-300">🏗️ Online Now</span>
+                      <span className="text-gray-300">Online Now</span>
                     </div>
                   </div>
                 </div>
@@ -310,7 +346,7 @@ const Chatbot = () => {
             {/* HOME SCREEN */}
             {screen === 'home' && (
               <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
-                
+
                 <div className="p-4 sm:p-5 space-y-3 sm:space-y-4">
                   <div className="text-center mb-3 sm:mb-4">
                     <h4 className="text-1xl sm:text-2xl font-bold text-slate-800 mb-2">
@@ -318,7 +354,7 @@ const Chatbot = () => {
                     </h4>
                     <p className="text-gray-600 text-sm sm:text-base">Professional Concrete, Driveways, Patios & Flooring services.</p>
                   </div>
-<br />
+                  <br />
                   <div className="space-y-2 sm:space-y-3 ">
                     {quickActions.map((action, index) => {
                       const Icon = action.icon;
@@ -462,7 +498,7 @@ const Chatbot = () => {
             )}
 
             {/* APPOINTMENT SCREEN */}
-           
+
 
           </div>
 
