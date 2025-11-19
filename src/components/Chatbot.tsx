@@ -270,7 +270,7 @@ const Chatbot = () => {
       >
         <div className="flex flex-col h-full">
           {/* Header with Black/Gray Gradient */}
-          <div className={`relative overflow-hidden bg-gradient-to-br from-[#0A2342] via-[#001F3F] to-[#001F3f] ${screen === 'home' ? 'pb-2' : ''}`} style={{ borderRadius: '25px 25px 0 0', border: "none" }}>
+          <div className={`relative overflow-hidden bg-gradient-to-br from-[#0A2342] via-[#001F3F] to-[#001F3f] ${screen === 'home' ? 'pb-4' : ''}`} style={{ borderRadius: '25px 25px 0 0', border: "none" }}>
             {/* Animated Background Effects */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl animate-pulse"
