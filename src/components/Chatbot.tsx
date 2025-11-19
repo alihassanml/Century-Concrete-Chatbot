@@ -265,7 +265,7 @@ const Chatbot = () => {
           maxHeight: '85vh',
           minHeight: '500px',
           borderRadius: "25px",
-          border: "none"
+          border: "1px solid #d1d1d1ff"
         }}
       >
         <div className="flex flex-col h-full">
