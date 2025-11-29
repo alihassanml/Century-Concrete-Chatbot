@@ -405,17 +405,17 @@ const Chatbot = () => {
                       <div className={`max-w-[85%] sm:max-w-[80%]`}>
                         <div className={`flex items-end space-x-2 ${msg.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                           <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shadow-lg flex-shrink-0 ${msg.type === 'user'
-                            ? 'bg-gradient-to-br from-gray-700 to-gray-800'
+                            ? 'bg-gradient-to-br from-gray-700 to-gray-700'
                             : 'bg-gradient-to-br from-slate-700 to-slate-900'
                             }`}>
                             <span className="text-white text-xs font-bold">
                               {msg.type === 'user' ? 'U' : 'A'}
                             </span>
                           </div>
-                          <div className={`px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-md ${msg.type === 'user'
-                            ? 'bg-gradient-to-br from-[#F2C14E] to-[#F2C14E] text-[#000000]'
-                            : 'bg-[#000000] text-[white] rounded-bl-sm border border-gray-200'
-                            }`}>
+                          <div className={`px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-md border border-gray-200
+  ${msg.type === 'user' ? 'bg-white text-black' : 'bg-natural-200 text-black'}
+`}>
+
                             <div
                               className="text-sm sm:text-base leading-relaxed"
                               dangerouslySetInnerHTML={{ __html: parseMarkdown(msg.text) }}
