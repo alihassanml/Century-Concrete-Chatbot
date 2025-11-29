@@ -9,7 +9,7 @@ type Message = {
 
 type Screen = 'home' | 'chat' | 'faq' | 'appointment';
 
-const WELCOME_MESSAGE = `Hi! Welcome to Century Concrete. How can we help you today?\n\nI can assist with stamped concrete, driveways, patios, and flooring.`;
+const WELCOME_MESSAGE = `Hi! Welcome to Century Concrete. How can we help you today?`;
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(true);
