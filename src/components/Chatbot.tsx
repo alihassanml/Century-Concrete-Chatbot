@@ -13,7 +13,7 @@ const WELCOME_MESSAGE = `Hi! Welcome to Century Concrete. How can we help you to
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [screen, setScreen] = useState<Screen>('home');
+  const [screen, setScreen] = useState<Screen>('chat');
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [typingMessage, setTypingMessage] = useState<string | null>(null);
@@ -126,7 +126,7 @@ const Chatbot = () => {
       title: "Start a Chat",
       subtitle: "Get instant concrete project help",
       action: () => setScreen('chat'),
-      gradient: "from-[#0A2342] to-[#001F3F]"
+      gradient: "from-[#000000] to-[#999696]"
     },
 
     {
@@ -134,7 +134,7 @@ const Chatbot = () => {
       title: "Email Support",
       subtitle: "info@centuryconcretedesign.com",
       action: () => window.open('mailto:info@centuryconcretedesign.com'),
-      gradient: "from-[#0A2342] to-[#001F3F]"
+      gradient: "from-[#000000] to-[#999696]"
     }
   ];
 
@@ -270,7 +270,7 @@ const Chatbot = () => {
       >
         <div className="flex flex-col h-full">
           {/* Header with Black/Gray Gradient */}
-          <div className={`relative overflow-hidden bg-gradient-to-br from-[#0A2342] via-[#001F3F] to-[#001F3f] ${screen === 'home' ? 'pb-4' : ''}`} style={{ borderRadius: '25px 25px 0 0', border: "none" }}>
+          <div className={`relative overflow-hidden bg-gradient-to-br from-[#000000] via-[# ] to-[#999696] ${screen === 'home' ? 'pb-4' : ''}`} style={{ borderRadius: '25px 25px 0 0', border: "none" }}>
             {/* Animated Background Effects */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl animate-pulse"
@@ -313,12 +313,12 @@ const Chatbot = () => {
 
               <div className="text-xs sm:text-sm opacity-90 text-gray-200">
                 {screen === 'home' && "👷 Concrete Services • Driveways • Patios • Flooring"}
-                {screen === 'chat' && "💬 We typically respond within seconds"}
+                {screen === 'chat' && "👷 Concrete Services • Driveways • Patios • Flooring"}
                 {screen === 'faq' && "❓ Quick answers to common questions"}
                 {screen === 'appointment' && "📅 Schedule your service appointment"}
               </div>
 
-              {screen === 'home' && (
+              {screen === 'chat' && (
                 <div className="mt-2 sm:mt-3">
                   <p className="text-sm sm:text-base opacity-80 leading-relaxed text-gray-200">
                     Trusted Concrete Experts • Residential & Commercial Projects
@@ -413,8 +413,8 @@ const Chatbot = () => {
                             </span>
                           </div>
                           <div className={`px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-md ${msg.type === 'user'
-                            ? 'bg-gradient-to-br from-[#F2C14E] to-[#F2C14E] text-[#0A2342]'
-                            : 'bg-[#0A2342] text-[white] rounded-bl-sm border border-gray-200'
+                            ? 'bg-gradient-to-br from-[#F2C14E] to-[#F2C14E] text-[#000000]'
+                            : 'bg-[#000000] text-[white] rounded-bl-sm border border-gray-200'
                             }`}>
                             <div
                               className="text-sm sm:text-base leading-relaxed"
@@ -506,7 +506,6 @@ const Chatbot = () => {
           <div className="border-t-2 border-gray-200 bg-white">
             <div className="flex">
               {[
-                { icon: Home, label: 'Home', screen: 'home' as Screen },
                 { icon: MessageCircle, label: 'Chat', screen: 'chat' as Screen },
                 { icon: HelpCircle, label: 'FAQ', screen: 'faq' as Screen }
               ].map((item) => {
@@ -529,7 +528,7 @@ const Chatbot = () => {
                       {item.label}
                     </span>
                     {isActive && (
-                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 sm:w-12 h-1 bg-gradient-to-r from-[#0A2342] to-[#001F3F] rounded-full"></div>
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 sm:w-12 h-1 bg-gradient-to-r from-[#000000] to-[#999696] rounded-full"></div>
                     )}
                   </button>
                 );
